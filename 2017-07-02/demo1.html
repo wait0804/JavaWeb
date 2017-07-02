@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset=“UTF-8”>
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<label for="txt">name</lable>
+		<input id="txt" type=“text” />
+		<span id="action"></span>
+	</body>
+	
+	<script type="text/javascript">
+		var txt = document.getElementById("txt");
+		txt.onfocus = function(){
+			var span = document.getElementById("action");
+			span.innerHTML = "用户名格式最小8位";
+			span.style.color = "green";	
+		};
+		txt.onblur = function(){
+			var span = document.getElementById("action");
+			span.innerHTML = "对不起 格式不正确";
+			span.style.color = "red";	
+		};
+	</script>
+</html>
